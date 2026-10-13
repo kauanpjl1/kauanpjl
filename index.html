@@ -1,143 +1,110 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>KauanPJL - Catálogo PS3</title>
-  <style>
-    * {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
-
-    body {
-      background-color: #1e1e1e;
-      font-family: Arial, sans-serif;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding-bottom: 40px;
-    }
-
-    /* BANNER SUPERIOR COM O TEU NOME */
-    .header-banner {
-      width: 100%;
-      max-width: 800px;
-      margin-bottom: 25px;
-      background: linear-gradient(135deg, #0f0f1a, #1b2838);
-      border-bottom: 3px solid #00d26a;
-      text-align: center;
-      padding: 25px 10px;
-    }
-
-    .header-banner h1 {
-      color: #00d26a;
-      font-size: 28px;
-      font-weight: bold;
-      letter-spacing: 2px;
-      text-transform: uppercase;
-      text-shadow: 0 0 10px rgba(0, 210, 106, 0.5);
-    }
-
-    .header-banner p {
-      color: #aaa;
-      font-size: 14px;
-      margin-top: 5px;
-    }
-
-    /* CONTAINER DAS CATEGORIAS */
-    .menu-container {
-      width: 100%;
-      max-width: 450px;
-      padding: 0 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 20px;
-      align-items: center;
-    }
-
-    /* BOTÃO DAS CATEGORIAS COM FOTO */
-    .cat-btn {
-      position: relative;
-      display: block;
-      width: 100%;
-      height: 180px;
-      background-color: #2a2a2a;
-      border: 3px solid #444;
-      border-radius: 8px;
-      overflow: hidden;
-      text-decoration: none;
-      transition: transform 0.2s, border-color 0.2s;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.6);
-    }
-
-    .cat-btn:hover {
-      transform: scale(1.02);
-      border-color: #00d26a;
-    }
-
-    .cat-btn img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-      display: block;
-    }
-
-    /* TEXTO SOBRE A IMAGEM */
-    .cat-title {
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background: rgba(0, 0, 0, 0.75);
-      color: #ffffff;
-      font-size: 22px;
-      font-weight: bold;
-      text-align: center;
-      padding: 10px 0;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      border-top: 1px solid rgba(255, 255, 255, 0.1);
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kauan PJL - Catálogo de Jogos PS3</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background-color: #121212;
+            color: #ffffff;
+            padding: 20px;
+        }
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        header h1 {
+            color: #0070d1;
+            font-size: 24px;
+            margin-bottom: 5px;
+        }
+        header p {
+            color: #888;
+            font-size: 14px;
+        }
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
+            justify-content: center;
+        }
+        .game-card {
+            background-color: #1e1e1e;
+            border: 1px solid #333;
+            border-radius: 8px;
+            width: 260px;
+            overflow: hidden;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.5);
+            transition: transform 0.2s;
+        }
+        .game-card:hover {
+            border-color: #0070d1;
+        }
+        .game-card img {
+            width: 100%;
+            height: 150px;
+            object-fit: cover;
+            background-color: #2a2a2a;
+        }
+        .game-info {
+            padding: 15px;
+        }
+        .game-info h3 {
+            font-size: 16px;
+            margin-bottom: 10px;
+            color: #fff;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+        .btn-download {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #0070d1;
+            color: white;
+            text-align: center;
+            text-decoration: none;
+            border-radius: 4px;
+            font-weight: bold;
+            font-size: 14px;
+            margin-top: 10px;
+        }
+        .btn-download:hover {
+            background-color: #005fb8;
+        }
+    </style>
 </head>
 <body>
 
-  <!-- BANNER TOPO KAUANPJL -->
-  <div class="header-banner">
-    <h1>KAUANPJL PS3</h1>
-    <p>Portal Oficial de Downloads PS3</p>
-  </div>
+    <header>
+        <h1>Kauan PJL - Catálogo PS3</h1>
+        <p>Baixe seus jogos em formato PKG diretamente no console</p>
+    </header>
 
-  <!-- MENU DE CATEGORIAS -->
-  <div class="menu-container">
+    <div class="container">
+        <!-- Cartão do Jogo: Uncharted 1 -->
+        <div class="game-card">
+            <!-- Substitua o link da imagem abaixo se preferir -->
+            <img src="https://upload.wikimedia.org/wikipedia/en/2/29/Uncharted_Drakes_Fortune_Box_Art.jpg" alt="Uncharted: Drake's Fortune">
+            <div class="game-info">
+                <h3>Uncharted: Drake's Fortune</h3>
+                <!-- Cole o link direto do arquivo PKG no href abaixo -->
+                <a href="URL_DO_SEU_JOGO.pkg" class="btn-download">Baixar PKG</a>
+            </div>
+        </div>
 
-    <!-- LOJAS -->
-    <a href="lojas.html" class="cat-btn">
-      <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&fit=crop&w=800&q=80" alt="Lojas">
-      <div class="cat-title">LOJAS</div>
-    </a>
-
-    <!-- JOGOS (IMAGEM DO ZELDA) -->
-    <a href="jogos.html" class="cat-btn">
-      <img src="https://images.unsplash.com/photo-1563089145-599997674d42?auto=format&fit=crop&w=800&q=80" alt="Jogos Zelda">
-      <div class="cat-title">JOGOS</div>
-    </a>
-
-    <!-- HOMEBREWS -->
-    <a href="ferramentas.html" class="cat-btn">
-      <img src="https://images.unsplash.com/photo-1511512578047-dfb367046420?auto=format&fit=crop&w=800&q=80" alt="Homebrews">
-      <div class="cat-title">HOMEBREWS</div>
-    </a>
-
-    <!-- TEMAS -->
-    <a href="temas.html" class="cat-btn">
-      <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?auto=format&fit=crop&w=800&q=80" alt="Temas">
-      <div class="cat-title">TEMAS</div>
-    </a>
-
-  </div>
+        <!-- Podes duplicar o bloco ".game-card" acima para adicionar mais jogos -->
+    </div>
 
 </body>
 </html>
