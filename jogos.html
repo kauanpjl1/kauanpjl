@@ -3,63 +3,222 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Jogos PS3 - KauanPJL</title>
+  <title>KauanPJL - Jogos PS3</title>
   <style>
-    * { box-sizing: border-box; margin: 0; padding: 0; }
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
     body {
-      background-color: #1e1e1e;
+      background-color: #121212;
       color: #e0e0e0;
       font-family: Arial, sans-serif;
-      padding: 20px;
-      text-align: center;
+      padding: 20px 15px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
+
+    /* Botão Voltar */
     .back-btn {
-      display: inline-block;
-      margin-bottom: 20px;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background-color: #1f1f1f;
       color: #00d26a;
+      border: 1px solid #333;
+      padding: 10px 18px;
+      border-radius: 20px;
       text-decoration: none;
       font-weight: bold;
-      font-size: 16px;
+      font-size: 14px;
+      margin-bottom: 20px;
+      transition: background 0.2s;
     }
-    h1 { color: #00d26a; margin-bottom: 20px; }
-    .card {
+
+    .back-btn:hover {
       background-color: #2a2a2a;
-      border: 1px solid #444;
-      border-radius: 8px;
-      max-width: 400px;
-      margin: 15px auto;
-      padding: 15px;
+    }
+
+    h1 {
+      color: #00d26a;
+      font-size: 26px;
+      margin-bottom: 25px;
+      text-shadow: 0 0 10px rgba(0, 210, 106, 0.3);
+    }
+
+    /* Container dos Jogos */
+    .games-gallery {
+      width: 100%;
+      max-width: 420px;
+      display: flex;
+      flex-direction: column;
+      gap: 25px;
+    }
+
+    /* Card do Jogo */
+    .card {
+      background: #1e1e1e;
+      border: 2px solid #333;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 6px 15px rgba(0, 0, 0, 0.7);
+    }
+
+    /* Capa do Jogo */
+    .card-banner {
+      width: 100%;
+      height: 210px;
+      object-fit: cover;
+      display: block;
+      border-bottom: 2px solid #333;
+    }
+
+    .card-content {
+      padding: 18px;
       text-align: left;
     }
-    .card h3 { color: #fff; margin-bottom: 5px; }
-    .card p { color: #aaa; font-size: 14px; margin-bottom: 12px; }
-    .btn {
-      display: block;
-      width: 100%;
-      padding: 10px;
-      margin-top: 8px;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 5px;
-      text-align: center;
+
+    .card h3 {
+      color: #ffffff;
+      font-size: 20px;
+      margin-bottom: 6px;
     }
-    .btn-mobile { background-color: #00d26a; color: #000; }
-    .btn-ps3 { background-color: #2b384e; color: #58a6ff; }
+
+    .card p {
+      color: #aaa;
+      font-size: 13px;
+      margin-bottom: 15px;
+      line-height: 1.4;
+    }
+
+    /* Títulos de Cada Parte */
+    .part-title {
+      color: #00d26a;
+      font-size: 13px;
+      font-weight: bold;
+      margin: 12px 0 6px 0;
+      border-bottom: 1px solid #333;
+      padding-bottom: 4px;
+    }
+
+    .part-buttons {
+      display: flex;
+      gap: 10px;
+    }
+
+    /* Estilo dos Botões */
+    .btn {
+      flex: 1;
+      padding: 10px 5px;
+      font-weight: bold;
+      font-size: 12px;
+      text-decoration: none;
+      border-radius: 6px;
+      text-align: center;
+      transition: transform 0.1s;
+    }
+
+    .btn:active {
+      transform: scale(0.97);
+    }
+
+    .btn-mobile {
+      background: linear-gradient(135deg, #00d26a, #00994d);
+      color: #000;
+    }
+
+    .btn-ps3 {
+      background: linear-gradient(135deg, #2b384e, #1a2332);
+      color: #58a6ff;
+      border: 1px solid #385885;
+    }
   </style>
 </head>
 <body>
 
   <a href="index.html" class="back-btn">⬅️ Voltar ao Menu Principal</a>
-  <h1>🕹️ JOGOS PS3</h1>
+  <h1>🕹️ CATÁLOGO DE JOGOS</h1>
 
-  <!-- JOGO 1: GTA V PT-BR -->
-  <div class="card">
-    <h3>Grand Theft Auto V (PT-BR)</h3>
-    <p>Formato: PKG | Idioma: PT-BR | Tamanho: 17.2 GB</p>
-    <!-- Substitui o link abaixo pelo teu link do ShrinkMe -->
-    <a href="SEU_LINK_DO_SHRINKME_AQUI" class="btn btn-mobile" target="_blank">📱 Baixar (Celular/PC)</a>
-    <!-- Substitui o link abaixo pelo link direto (Mediafire/Mega/Drive) -->
-    <a href="SEU_LINK_DIRETO_MEDIAFIRE_AQUI" class="btn btn-ps3" target="_blank">🎮 Baixar Direto (PS3)</a>
+  <div class="games-gallery">
+
+    <!-- CARD: UNCHARTED 1 DUBLADO -->
+    <div class="card">
+      <!-- Imagem de Capa do Uncharted 1 -->
+      <img src="https://m.media-amazon.com/images/M/MV5BMjA4NDI5MTE0MF5BMl5BanBnXkFtZTcwMzA2ODU0Mw@@._V1_.jpg" alt="Uncharted 1: Drake's Fortune" class="card-banner">
+      
+      <div class="card-content">
+        <h3>Uncharted 1: Drake's Fortune</h3>
+        <p>📦 Formato: PKG<br>🗣️ Idioma: Dublado / Legendado PT-BR<br>📂 Dividido em 9 Partes</p>
+
+        <!-- PARTE 1 -->
+        <div class="part-title">📌 Parte 1</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/811r4y4q9db54xw/1_-_Espacy_-_Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/811r4y4q9db54xw/1_-_Espacy_-_Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 2 -->
+        <div class="part-title">📌 Parte 2</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/vk5ab1yasurul2v/2_-_Espacy_-_Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/vk5ab1yasurul2v/2_-_Espacy_-_Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 3 -->
+        <div class="part-title">📌 Parte 3</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/urbsirjpeagtig4/3+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/urbsirjpeagtig4/3+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 4 -->
+        <div class="part-title">📌 Parte 4</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/vac14njp5wacn9f/4+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/vac14njp5wacn9f/4+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 5 -->
+        <div class="part-title">📌 Parte 5</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/3gxfs7og11vv966/5+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/3gxfs7og11vv966/5+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 6 -->
+        <div class="part-title">📌 Parte 6</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/cdncbypwg5wafto/6+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/cdncbypwg5wafto/6+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 7 -->
+        <div class="part-title">📌 Parte 7</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/hom08aodob6p1z4/7+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/hom08aodob6p1z4/7+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 8 -->
+        <div class="part-title">📌 Parte 8</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/88srfq95w6xmoxb/8+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/88srfq95w6xmoxb/8+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+        <!-- PARTE 9 -->
+        <div class="part-title">📌 Parte 9</div>
+        <div class="part-buttons">
+          <a href="https://www.mediafire.com/file/t7rw0lspba3kdl7/9+-+Espacy+-+Uncharted.pkg/file" class="btn btn-mobile" target="_blank">📱 Celular/PC</a>
+          <a href="https://www.mediafire.com/file/t7rw0lspba3kdl7/9+-+Espacy+-+Uncharted.pkg/file" class="btn btn-ps3" target="_blank">🎮 PS3 Direto</a>
+        </div>
+
+      </div>
+    </div>
+
   </div>
 
 </body>
