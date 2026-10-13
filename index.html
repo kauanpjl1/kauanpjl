@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Meu Catálogo PS3 - Categorias</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #e0e0e0;
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00d26a;
+      margin-bottom: 10px;
+    }
+    p {
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+    .categories-container {
+      max-width: 400px;
+      margin: 0 auto;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    .cat-card {
+      background-color: #1e1e1e;
+      border: 1px solid #333;
+      border-radius: 10px;
+      padding: 20px;
+      text-decoration: none;
+      color: #fff;
+      font-size: 18px;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      transition: background-color 0.2s, border-color 0.2s;
+    }
+    .cat-card:hover {
+      background-color: #252525;
+      border-color: #00d26a;
+      color: #00d26a;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>🎮 MEU CATÁLOGO PS3</h1>
+  <p>Escolha uma categoria abaixo para ver os downloads:</p>
+
+  <div class="categories-container">
+    <a href="jogos.html" class="cat-card">🕹️ Ver Todos os Jogos</a>
+    <a href="lojas.html" class="cat-card">🛒 Ver Todas as Lojas</a>
+    <a href="ferramentas.html" class="cat-card">🛠️ Ver Ferramentas & Mods</a>
+  </div>
+
+</body>
+</html>
