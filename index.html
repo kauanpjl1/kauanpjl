@@ -3,35 +3,106 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kauan PJL Store</title>
+    <title>KAUAN PJL - Início</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: Arial, sans-serif; }
-        body { background-color: #0d0d0d; color: #fff; text-align: center; padding: 20px; }
-        h1 { color: #0070d1; margin-bottom: 5px; font-size: 24px; }
-        p { color: #888; margin-bottom: 25px; font-size: 14px; }
-        .menu-grid { display: flex; flex-direction: column; gap: 12px; max-width: 300px; margin: 0 auto; }
-        .menu-btn {
-            background-color: #1a1a1a;
-            border: 2px solid #0070d1;
-            color: #fff;
-            padding: 14px;
-            text-decoration: none;
-            font-size: 16px;
-            font-weight: bold;
-            border-radius: 6px;
-            display: block;
+        body { 
+            background-color: #0b0b0e; 
+            color: #ffffff; 
+            text-align: center; 
+            background-image: radial-gradient(#1a1a2e 15%, transparent 16%), radial-gradient(#151522 15%, transparent 16%);
+            background-size: 60px 60px;
+            background-position: 0 0, 30px 30px;
+            padding-bottom: 30px;
         }
-        .menu-btn:hover { background-color: #0070d1; }
+        
+        /* Banner Estilo Michael17 */
+        .banner-topo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: linear-gradient(90deg, #120024, #2b0054, #120024);
+            border-bottom: 3px solid #00ff75;
+            padding: 10px 20px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.8);
+            margin-bottom: 30px;
+        }
+
+        .banner-side-img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 2px solid #00ff75;
+            box-shadow: 0 0 10px #00ff75;
+        }
+
+        .banner-title {
+            font-size: 26px;
+            font-weight: bold;
+            color: #ffffff;
+            text-shadow: 0 0 10px #00ff75, 0 0 20px #005fb8;
+            letter-spacing: 2px;
+        }
+
+        .container {
+            max-width: 450px;
+            margin: 0 auto;
+            padding: 0 15px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            align-items: center;
+        }
+
+        /* Cartões de Categoria */
+        .category-card {
+            display: block;
+            width: 100%;
+            border-radius: 10px;
+            overflow: hidden;
+            border: 2px solid #333;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.7);
+            transition: transform 0.2s, border-color 0.2s;
+            text-decoration: none;
+            background: #151515;
+        }
+
+        .category-card:hover {
+            transform: scale(1.02);
+            border-color: #00ff75;
+        }
+
+        .category-card img {
+            width: 100%;
+            height: 160px;
+            display: block;
+            object-fit: cover;
+        }
     </style>
 </head>
 <body>
-    <h1>Kauan PJL Store</h1>
-    <p>Catálogo de Jogos e Ferramentas PS3</p>
 
-    <div class="menu-grid">
-        <a href="jogos.html" class="menu-btn">🎮 JOGOS</a>
-        <a href="temas.html" class="menu-btn">🎨 TEMAS</a>
-        <a href="lojas.html" class="menu-btn">🛒 LOJAS & UTILS</a>
+    <!-- Banner Personalizado no Topo com Link e Zelda -->
+    <div class="banner-topo">
+        <img src="https://images.unsplash.com/photo-1579783902614-a3fb3927b675?w=200" alt="Link" class="banner-side-img">
+        <div class="banner-title">KAUAN PJL</div>
+        <img src="https://images.unsplash.com/photo-1607604276583-eef5d076aa5f?w=200" alt="Zelda" class="banner-side-img">
     </div>
+
+    <div class="container">
+
+        <!-- CATEGORIA: JOGOS PS3 (Vai direto para o seu catálogo do Uncharted) -->
+        <a href="jogos-ps3.html" class="category-card">
+            <img src="https://images.unsplash.com/photo-1612287230202-1ff1d85d1bdf?w=600" alt="Jogos PS3">
+        </a>
+
+        <!-- CATEGORIA: JOGOS PS2 -->
+        <a href="jogos.html" class="category-card">
+            <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=600" alt="Outras Lojas / Categorias">
+        </a>
+
+    </div>
+
 </body>
 </html>
